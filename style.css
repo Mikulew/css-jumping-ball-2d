@@ -4,27 +4,28 @@ body {
 }
 
 .canvas {
-  display: flex;
-  align-items: center;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  margin: auto; 
   background-color: #94bcdf;
   height: 100vh;
   width: 100%;
 }
 
-.ball-container {
-  width: 57px;
-  height: 50px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .ball {
   position: relative;
-  top: 100px;
-  left: 220px;
+  bottom: 30%;
   background-color: #ff1a66;
   height: 50px;
   width: 50px;
@@ -34,14 +35,14 @@ body {
 
 .shadow {
   position: relative;
-  top: 310px;
-  left: 212px;
-  z-index: -1;
+  top: 2%;
+  bottom: 30%;
   background-color: rgba(8, 8, 8, .05);
   height: 10px;
   width: 65px;
   border-radius: 50%;
   animation: shrink .9s infinite;
+  z-index: 1;
 }
 
 @keyframes bounce {
@@ -69,6 +70,6 @@ body {
 
 @keyframes shrink {
   50% {
-    transform: sclae(.5);
+    transform: scale(.5);
   }
 }
